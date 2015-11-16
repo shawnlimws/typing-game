@@ -1,3 +1,6 @@
-#playerField {
-  autofocus
+.sharks {
+  color: blue
+}
+.shark-beaten {
+  color: red
 }
