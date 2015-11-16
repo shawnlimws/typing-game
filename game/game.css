@@ -1,6 +1,9 @@
+div {
+  margin: 20px;
+}
 .sharks {
-  color: blue
+  color: blue;
 }
 .shark-beaten {
-  color: red
+  color: red;
 }
