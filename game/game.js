@@ -20,25 +20,20 @@ generateWords()
 
 // Check words
 document.querySelector('input').autofocus = true
-document.getElementById('playerField').addEventListener('input', checkWords)
+document.getElementById('playerField').addEventListener('keydown', checkWords)
+document.getElementById('playerField').addEventListener('keydown', clearField)
 
 function checkWords (event) {
-  if (event.target.value === sharkOne.innerText) {
-    sharkOne.className = 'shark-beaten'
-  } else if (event.target.value === sharkTwo.innerText) {
-    sharkTwo.className = 'shark-beaten'
-  } else if (event.target.value === sharkThree.innerText) {
-    sharkThree.className = 'shark-beaten'
-  } else if (event.target.value === sharkFour.innerText) {
-    sharkFour.className = 'shark-beaten'
-  } else if (event.target.value === sharkFive.innerText) {
-    sharkFive.className = 'shark-beaten'
+  sharks.forEach(shark => {
+    if (shark.innerText === inputField.value && event.keyCode === 13) {
+      shark.className = 'shark-beaten'
+      inputField.value = ''
+    } else return
   }
-}
+) }
 
-// Clear input box
-inputField.addEventListener('keydown', function (e) {
-  if (e.keyCode === 13) {
+function clearField (event) {
+  if (event.keyCode === 13) {
     inputField.value = ''
   }
-})
+}
