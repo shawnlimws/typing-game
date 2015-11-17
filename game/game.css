@@ -20,10 +20,10 @@ div {
   background-repeat: no-repeat;
   padding: 50px;
   color: white;
-  animation-duration: 8s;
+  animation-duration: 12s;
   animation-timing-function: ease-in-out;
   animation-name: slidein;
-  margin-left: 20%
+  margin-left: 20%;
 }
 @keyframes slidein {
   from {
