@@ -1,9 +1,42 @@
+body {
+  background-image: url("../dark-water.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+h1 {
+  color: white;
+}
 div {
-  margin: 20px;
+}
+.player {
+  position: fixed;
+  top: 50%;
+  bottom: 50%
 }
 .sharks {
   color: blue;
+  background-image: url("../shark3.png");
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+  padding: 50px;
+  color: white;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-name: slidein;
+  margin-left: 20%
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 20%;
+  }
 }
 .shark-beaten {
-  color: red;
+  color: white;
+  background-image: url("../injured-shark.png");
+  padding: 50px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
 }

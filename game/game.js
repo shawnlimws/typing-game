@@ -1,9 +1,4 @@
 var randomWords = require('random-words')
-var sharkOne = document.getElementById('sharkone')
-var sharkTwo = document.getElementById('sharktwo')
-var sharkThree = document.getElementById('sharkthree')
-var sharkFour = document.getElementById('sharkfour')
-var sharkFive = document.getElementById('sharkfive')
 var playerInput = document.getElementById('playertext')
 var sharks = Array.from(document.getElementsByClassName('sharks'))
 var inputField = document.getElementById('playerField')
@@ -26,14 +21,17 @@ document.getElementById('playerField').addEventListener('keydown', clearField)
 function checkWords (event) {
   sharks.forEach(shark => {
     if (shark.innerText === inputField.value && event.keyCode === 13) {
-      shark.className = 'shark-beaten'
+      shark.style.backgroundImage = 'url(../injured-shark.png)'
       inputField.value = ''
     } else return
   }
 ) }
 
+// Clear the input box
 function clearField (event) {
   if (event.keyCode === 13) {
     inputField.value = ''
   }
 }
+
+// Make the images move
