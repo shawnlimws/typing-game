@@ -2,6 +2,8 @@ body {
   background-image: url("../dark-water.jpeg");
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: auto;
 }
 h1 {
   color: white;
@@ -13,30 +15,17 @@ div {
   top: 50%;
   bottom: 50%
 }
+.school {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .sharks {
   color: blue;
   background-image: url("../shark3.png");
-  background-size: 120px 120px;
+  background-size: 100px 120px;
   background-repeat: no-repeat;
   padding: 50px;
   color: white;
-  animation-duration: 12s;
-  animation-timing-function: ease-in-out;
-  animation-name: slidein;
-  margin-left: 20%;
-}
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-  }
-  to {
-    margin-left: 20%;
-  }
-}
-.shark-beaten {
-  color: white;
-  background-image: url("../injured-shark.png");
-  padding: 50px;
-  background-size: 120px 120px;
-  background-repeat: no-repeat;
+  margin-left: 80%
 }
