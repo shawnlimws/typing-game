@@ -6,13 +6,14 @@
   "scripts": {
     "start": "npm run build && npm run start-server",
     "start-server": "http-server dist",
-    "test": "standard",
+    "test": "standard && mocha",
     "clean": "rm -rf dist",
     "build": "npm run clean && mkdir dist && npm run build-html && npm run build-css && npm run build-js",
     "build-html": "cp game/index.html dist/index.html",
     "build-css": "cp game/game.css dist/game.css",
     "build-js": "browserify game/game.js --outfile dist/game.js --transform babelify",
-    "watch": "npm run build && npm run watch-js & npm run watch-css & npm run watch-html & npm run start-server",
+    "watch": "npm run build && npm run watch-test & npm run watch-js & npm run watch-css & npm run watch-html & npm run start-server",
+    "watch-test": "mocha --watch",
     "watch-css": "watch-spawn --pattern 'game/game.css' npm run build-css",
     "watch-html": "watch-spawn -p 'game/index.html' npm run build-html",
     "watch-js": "watchify game/game.js --outfile dist/game.js --transform babelify --verbose"
@@ -36,6 +37,9 @@
     "watchify": "^3.6.0"
   },
   "devDependencies": {
+    "babel-core": "^6.1.21",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
     "watch-spawn": "^1.0.6",
     "watchify": "^3.6.0"
   }

@@ -4,6 +4,8 @@ body {
   background-repeat: no-repeat;
   overflow: hidden;
   background-size: auto;
+  height: 100%;
+  width: 100%;
 }
 h1 {
   color: white;
@@ -20,12 +22,24 @@ div {
   align-items: center;
   flex-direction: column;
 }
+
 .sharks {
-  color: blue;
-  background-image: url("../media/shark3.png");
-  background-size: 100px 120px;
-  background-repeat: no-repeat;
-  padding: 50px;
   color: white;
-  margin-left: 90%;
+  background-image: url("../media/shark3.png");
+  background-size: 90px 110px;
+  background-repeat: no-repeat;
+  padding: 60px;
+  color: white;
+  margin-left: -50vw;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-name: slidein;
+}
+  @keyframes slidein {
+    from {
+      margin-left: 80vw;
+    }
+    to {
+      margin-left: -50vw;
+    }
 }
