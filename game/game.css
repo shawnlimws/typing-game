@@ -13,7 +13,7 @@ h1 {
 div {
 }
 .player {
-  position: fixed;
+  position: absolute;
   top: 50%;
   bottom: 50%
 }
@@ -30,16 +30,17 @@ div {
   background-repeat: no-repeat;
   padding: 60px;
   color: white;
-  margin-left: -50vw;
+  position: relative;
+  margin-left: -40vw;
   animation-duration: 10s;
   animation-timing-function: ease-in-out;
   animation-name: slidein;
 }
   @keyframes slidein {
     from {
-      margin-left: 80vw;
+      margin-left: 85vw;
     }
     to {
-      margin-left: -50vw;
+      margin-left: -40vw;
     }
 }
