@@ -1,11 +1,63 @@
+html {
+ height: 100%;
+ margin: 0;
+}
+body {
+  height: 100%;
+  background-image: url("../media/dark-water.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+  color: white;
+}
+input {
+  position: absolute;
+  bottom: 2vw;
+  width: 20%;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+.school {
+
+}
+.school .sharks {
+
+}
+/*html {
+  height: 100%;
+}
 body {
   background-image: url("../media/dark-water.jpeg");
-  background-position: center;
+  color: white;
   background-repeat: no-repeat;
-  overflow: hidden;
-  background-size: auto;
-  height: 100%;
-  width: 100%;
+  background-size: 100% 100%
+}
+.player {
+}
+input {
+  position: absolute;
+  bottom: 2vw;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid white;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 40px;
+}*/
+/*body {
+  background-image: url("../media/dark-water.jpeg");
 }
 h1, h2, a {
   color: white;
@@ -19,7 +71,7 @@ div {
   border-style: solid;
   margin-right:80vw;
   text-align: center;
-  height: 9vw;
+  height: 10px;
   vertical-align: middle;
 }
 .player {
@@ -41,7 +93,8 @@ div {
   background-repeat: no-repeat;
   padding: 60px;
   color: white;
-  position: relative;
+  position: absolute;
+  top: 0;
   margin-left: -40vw;
   animation-duration: 10s;
   animation-timing-function: ease-in-out;
@@ -54,4 +107,4 @@ div {
     to {
       margin-left: -40vw;
     }
-}
+}*/
