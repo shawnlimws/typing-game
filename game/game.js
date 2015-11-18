@@ -1,7 +1,7 @@
 var randomWords = require('random-words')
 var sharks = Array.from(document.getElementsByClassName('sharks'))
 var inputField = document.getElementById('playerField')
-
+document.getElementById('score').textContent = 0
 // Create the shark words
 function generateWords () {
   sharks.forEach(shark =>
@@ -23,6 +23,7 @@ function checkWords (event) {
       shark.style.backgroundImage = 'url(../media/injured-shark.png)'
       inputField.value = ''
       shark.style.animationPlayState = 'paused'
+      document.getElementById('score').textContent = parseInt(document.getElementById('score').textContent) + 1
     }
   })
 }

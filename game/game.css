@@ -7,10 +7,20 @@ body {
   height: 100%;
   width: 100%;
 }
-h1 {
+h1, h2, a {
+  color: white;
+}
+a {
   color: white;
 }
 div {
+}
+.scoreboard {
+  border-style: solid;
+  margin-right:80vw;
+  text-align: center;
+  height: 9vw;
+  vertical-align: middle;
 }
 .player {
   position: absolute;
@@ -24,6 +34,7 @@ div {
 }
 
 .sharks {
+  position: absolute;
   color: white;
   background-image: url("../media/shark3.png");
   background-size: 90px 110px;
