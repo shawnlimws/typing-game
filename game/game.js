@@ -22,7 +22,7 @@ document.getElementById('playerField').addEventListener('keydown', clearField)
 function checkWords (event) {
   sharks.forEach(shark => {
     if (shark.innerText === inputField.value && event.keyCode === 13) {
-      shark.style.backgroundImage = 'url(../injured-shark.png)'
+      shark.style.backgroundImage = 'url(../media/injured-shark.png)'
       inputField.value = ''
     }
   })

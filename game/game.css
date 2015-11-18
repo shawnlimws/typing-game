@@ -1,5 +1,5 @@
 body {
-  background-image: url("../dark-water.jpeg");
+  background-image: url("../media/dark-water.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -22,7 +22,7 @@ div {
 }
 .sharks {
   color: blue;
-  background-image: url("../shark3.png");
+  background-image: url("../media/shark3.png");
   background-size: 100px 120px;
   background-repeat: no-repeat;
   padding: 50px;
