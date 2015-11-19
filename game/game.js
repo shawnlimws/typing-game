@@ -15,18 +15,16 @@ generateWords()
 
 // Check words
 document.querySelector('input').autofocus = true
-document.getElementById('playerField').addEventListener('keydown', checkWords)
-document.getElementById('playerField').addEventListener('keydown', clearField)
+inputField.addEventListener('keydown', checkWords)
+inputField.addEventListener('keydown', clearField)
 
 function checkWords (event) {
   sharks.forEach(shark => {
     if (shark.innerText === inputField.value && event.keyCode === 13) {
       shark.style.listStyle = 'url(media/injured-shark.png)'
-      inputField.value = ''
-      shark.style.animationPlayState = 'paused'
       shark.textContent = ''
       document.getElementById('score').textContent = parseInt((document.getElementById('score').textContent), 10) + 1
-      restart()
+      end()
     }
   })
 }
@@ -38,9 +36,9 @@ function clearField (event) {
   }
 }
 
-function restart () {
+function end () {
   if (sharks.every(shark => shark.textContent === '')) {
-    generateWords()
+    document.querySelector('.school').style.animationPlayState = 'paused'
   }
 }
 
