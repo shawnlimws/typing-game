@@ -21,10 +21,11 @@ document.getElementById('playerField').addEventListener('keydown', clearField)
 function checkWords (event) {
   sharks.forEach(shark => {
     if (shark.innerText === inputField.value && event.keyCode === 13) {
-      shark.style.listStyle = 'url(../media/injured-shark.png)'
+      shark.style.listStyle = 'url(media/injured-shark.png)'
       inputField.value = ''
       shark.style.animationPlayState = 'paused'
-      document.getElementById('score').textContent = parseInt(document.getElementById('score').textContent) + 1
+      shark.textContent = ''
+      document.getElementById('score').textContent = parseInt((document.getElementById('score').textContent), 10) + 1
       restart()
     }
   })
