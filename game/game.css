@@ -18,7 +18,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  height: 75%;
+  height: 70%;
   position: absolute;
   animation-name: slidein;
   animation-duration: 18s;
@@ -39,6 +39,7 @@ h1 {
 li {
   list-style: url("../media/shark3.png");
   flex-grow: 1;
+  font-size: 40px;
 }
 #sharkOne {
   margin-left: 10vw;
