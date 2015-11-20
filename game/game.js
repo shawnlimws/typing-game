@@ -51,7 +51,7 @@ function end () {
     setTimeout(function () {
       document.querySelector('ul').classList.add('school')
       generateWords()
-    }, 500)
+    }, 200)
   }
 }
 
