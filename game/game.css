@@ -28,7 +28,7 @@ ul {
 }
 @keyframes slidein {
   0% {
-    right: -50%;
+    right: -85%;
   }
   100% {
     right: 110%;
@@ -41,17 +41,6 @@ li {
   list-style: url("media/shark3.png");
   flex-grow: 1;
   font-size: 40px;
-}
-#sharkOne {
-  margin-left: 10vw;
-}
-#sharkTwo {
-  margin-left: -10vw;
-}
-#sharkThree {
-}
-#sharkFour {
-  margin-left: 20vw;
 }
 .playerStuff {
   display: flex;

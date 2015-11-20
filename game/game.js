@@ -9,7 +9,11 @@ function generateWords () {
     shark.appendChild(
       document.createTextNode(randomWords(1))
     )
-  )
+)
+  document.getElementById('sharkOne').style.marginLeft = Math.random() * 50 + 'vw'
+  document.getElementById('sharkTwo').style.marginLeft = Math.random() * 80 + 'vw'
+  document.getElementById('sharkThree').style.marginLeft = Math.random() * 100 + 'vw'
+  document.getElementById('sharkFour').style.marginLeft = Math.random() * 30 + 'vw'
 }
 generateWords()
 
