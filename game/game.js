@@ -1,11 +1,15 @@
+function getAliveSharks () {
+  return Array.from(document.querySelectorAll('.shark:not(.dead)'))
+}
+
+// Variables
 var randomWords = require('random-words')
-var sharks = Array.from(document.getElementsByClassName('sharks'))
 var inputField = document.getElementById('playerField')
 document.getElementById('score').textContent = 0
 
 // Create the shark words
 function generateWords () {
-  sharks.forEach(shark =>
+  getAliveSharks().forEach(shark =>
     shark.appendChild(
       document.createTextNode(randomWords(1))
     )
@@ -14,18 +18,18 @@ function generateWords () {
   document.getElementById('sharkTwo').style.marginLeft = Math.random() * 80 + 'vw'
   document.getElementById('sharkThree').style.marginLeft = Math.random() * 100 + 'vw'
   document.getElementById('sharkFour').style.marginLeft = Math.random() * 30 + 'vw'
+  document.querySelector('ul').classList.add('school')
 }
 generateWords()
 
-// Check words
-document.querySelector('input').autofocus = true
+// Check words (number 13 refers to Enter key)
 inputField.addEventListener('keydown', checkWords)
 inputField.addEventListener('keydown', clearField)
 
 function checkWords (event) {
-  sharks.forEach(shark => {
+  getAliveSharks().forEach(shark => {
     if (shark.innerText === inputField.value && event.keyCode === 13) {
-      shark.style.listStyle = 'url(media/injured-shark.png)'
+      shark.classList.add('dead')
       shark.textContent = ''
       document.getElementById('score').textContent = parseInt((document.getElementById('score').textContent), 10) + 1
       end()
@@ -39,10 +43,15 @@ function clearField (event) {
     inputField.value = ''
   }
 }
-
+// End the round
 function end () {
-  if (sharks.every(shark => shark.textContent === '')) {
-    document.querySelector('.school').style.animationPlayState = 'paused'
+  if (getAliveSharks().length === 0) {
+    Array.from(document.querySelectorAll('li')).forEach(shark => shark.className = 'shark')
+    document.querySelector('ul').classList.remove('school')
+    setTimeout(function () {
+      document.querySelector('ul').classList.add('school')
+      generateWords()
+    }, 1000)
   }
 }
 
@@ -50,6 +59,3 @@ function end () {
 // 1) add the filter function and split up the checkWords function
 // 2) change the input to a form so don't have to requure keyCode 13
 // 3) can check if animation is paused then restart game
-
-// questions:
-// 1) why is vertical not responsive
