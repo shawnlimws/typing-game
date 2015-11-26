@@ -58,4 +58,5 @@ function end () {
 // things to do:
 // 1) add the filter function and split up the checkWords function
 // 2) change the input to a form so don't have to requure keyCode 13
-// 3) can check if animation is paused then restart game
+// 3) lose life
+// 4) make it move faster each turn
